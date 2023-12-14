@@ -1,3 +1,9 @@
 * {
-  background-color: blueviolet;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: linear-gradient(45deg, #FF6B6B, #556270); 
 }

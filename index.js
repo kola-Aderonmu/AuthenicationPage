@@ -8,8 +8,9 @@ const port = 5000;
 //---------------------------------------------------------
 
 // app.use(express.json()); //use to access object
+app.use(express.static(path.resolve(__dirname, "./public")));
 app.use(morgan("combined")); //use to get info on all info of a path
-app.use(express.static(path.resolve(__dirname, "login/login.html")))
+
 
 // middleware
 // const timeLogger = (req, res, next) => {
@@ -30,7 +31,7 @@ app.use(express.static(path.resolve(__dirname, "login/login.html")))
 //first route
 
 app.get("/", (req, res) => {
-  console.log(path.resolve(__dirname, "login/login.html"));
+//   console.log(path.resolve(__dirname, "login/login.html"));
   res.sendFile(path.resolve(__dirname, "login/login.html"));
 });
 
